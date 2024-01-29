@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(213, 252, 252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #05045a;
+    margin-bottom: 1.25rem;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.625rem;
+}
+
+.cell {
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: white;
+    border: 0.125rem solid #5d6d91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.input-area {
+    margin-top: 1.25rem;
+}
+
+#guess-input {
+    font-size: 1em;
+    padding: 0.625rem;
+    margin-right: 0.625rem;
+    width: 18.75rem;
+}
+
+#submit-guess {
+    padding: 0.625rem 1.25rem;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #3361c4;
+    color: white;
+    border: none;
+    border-radius: 0.3125rem;
+}
+
+#submit-guess:hover {
+    background-color: #003ec5;
+}
+
+.row {
+    display: contents;
+}
+
+@media screen and (max-width: 580px) {
+    .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cell {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #submit-guess {
+        margin-top: 0.5rem;
+    }
+}
